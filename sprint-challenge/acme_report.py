@@ -11,7 +11,7 @@ NOUNS = ['Anvil', 'Catapult', 'Disguise', 'Mousetrap', '???']
 def generate_products(num_products=30):
     products = []
     for i in range(num_products):
-        name = dict(str(sample(ADJECTIVES, 1)) + " " + str(sample(NOUNS, 1)))
+        name = str(sample(ADJECTIVES, 1)) + " " + str(sample(NOUNS, 1))
         price = (randint(5, 100))
         weight = (randint(5, 100))
         flammability = (uniform(0.0, 2.5))

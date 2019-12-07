@@ -31,7 +31,8 @@ class AcmeReportTests(unittest.TestCase):
     def test_legal_names(self):
         delta = generate_products()
         theta = ADJECTIVES + NOUNS
-        self.assertIn(delta, theta)
+        for i in delta:
+          self.assertIn(Product.name, theta)
 
 if __name__ == '__main__':
     unittest.main()
