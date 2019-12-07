@@ -16,11 +16,11 @@ class AcmeProductTests(unittest.TestCase):
 
     def test_steal_method(self):
         alpha = Product(price=20, weight=20)
-        self.assertEqual(alpha.stealability, 'Very stealable!')
+        self.assertEqual(alpha.stealability(), 'Very stealable!')
 
     def test_explode_method(self):
         beta = Product(flammability=2, weight=50)
-        self.assertEqual(beta.flammability, 'BABOOM!')
+        self.assertEqual(beta.explode(), 'BABOOM!')
 
 
 class AcmeReportTests(unittest.TestCase):
