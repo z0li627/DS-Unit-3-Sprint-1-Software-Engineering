@@ -21,30 +21,10 @@ def generate_products(num_products=30):
 
 
 def inventory_report(products):
-    for Product in products:
-        print(Product.name)
+    print("Average weight: ", sum(Product.weight for Product in products)/float(len(products)))
+    print("Average price: ", sum(Product.price for Product in products)/float(len(products)))
+    print("Average flammability: ", sum(Product.flammability for Product in products)/float(len(products)))
 
-    for Product in products:
-        print(Product.price)
-
-    for Product in products:
-        print(Product.weight)
-
-    for Product in products:
-        print(Product.flammability)
-
-#    print(len(set(Product.name)))
-#    for Product in products:
-#        b = sum(Product.price) / len(Product.price)
-#        print(b)
-#    for Product in products:
-#        print(Product.name)
-#    for Product in products:
-#        print(sum(Product.price) / len(Product.price))
-#    for Product in products:
-#        print(sum(Product.weight) / len(Product.weight))
-#    for Product in products:
-#        print(sum(Product.flammability) / len(Product.flammability))
 
 if __name__ == '__main__':
     inventory_report(generate_products())
